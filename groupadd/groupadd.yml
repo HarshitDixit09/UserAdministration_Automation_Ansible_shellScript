@@ -1,0 +1,10 @@
+---
+- hosts: xyz
+  become: true
+  become_user: root
+  vars:
+    grpnme: abcd
+    gidnum: gidvalue
+  tasks:
+    - name: group add task
+      group: name={{ grpnme }} gid={{ gidnum }} state=present
